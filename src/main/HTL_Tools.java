@@ -26,7 +26,6 @@ public class HTL_Tools {
 		changeColor.setBounds(25, 400, 50, 30);
 	}
 
-	// Zur Übersicht in eine eigene Methode
 	public static void addComboBoxItems(JComboBox<Background> a, data.Background... b) {
 		for (data.Background k : b) {
 			switch (k) {
