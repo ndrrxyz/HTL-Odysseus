@@ -11,7 +11,7 @@ public class HTL_Tools {
 
 		// Standard Window
 		JFrame f = new JFrame("HTL-Tools");
-		f.setSize(680000, 480);
+		f.setSize(640, 480);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.getContentPane().setBackground(Color.DARK_GRAY);
 		f.setVisible(true);
