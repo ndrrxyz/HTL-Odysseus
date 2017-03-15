@@ -40,5 +40,7 @@ public class HTL_Odysseus {
 		f.setLayout(null);
 		f.setResizable(false);
 		f.setIconImage(imgicon.getImage());
+		
+		JButton button = new CustomButton(f, "KV-Diagramm", 200, 100, 490, 310);
 	}
 }
