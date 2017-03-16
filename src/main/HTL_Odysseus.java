@@ -44,7 +44,7 @@ public class HTL_Odysseus {
 
 		/*Main Menu Buttons*/
 		/*Vector Diagram*/
-		CustomButton b = new CustomButton(f, Application.VECTOR_DIAGRAMM, 250, 100, 10, 180);
+		CustomButton b = new CustomButton(f, Application.VECTOR_DIAGRAM, 250, 100, 10, 180);
 		b.changeIcon("/resources/circuit.jpg");
 		f.add(b);
 		b.addActionListener(new CustomButtonListener());
