@@ -45,7 +45,6 @@ public class HTL_Odysseus {
 		f.setContentPane(new JLabel(new ImageIcon((HTL_Odysseus.class.getResource("/resources/BackgroundMenu.png")))));
 
 		/*Main Menu Buttons*/
-		
 		/*[V]ector [D]iagram*/
 		CustomButton bVD = new CustomButton(f, Application.VECTOR_DIAGRAMM, 250, 100, 10, 180);
 		bVD.changeIcon("/resources/VectorDiagramButton.jpg");
@@ -63,7 +62,6 @@ public class HTL_Odysseus {
 		bKR.changeIcon("/resources/ComplexCalculatorButton.jpg");
 		f.add(bKR);
 		bKR.addActionListener(new CustomButtonListener());
-		
 	}
 
 }
