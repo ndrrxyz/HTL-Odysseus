@@ -1,6 +1,9 @@
 package main;
 
+import java.awt.Color;
+
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 
 import data.Application;
 
@@ -8,6 +11,7 @@ import data.Application;
 
 public class CustomButton extends JButton {
 	private static final long serialVersionUID = 1289736459726L;
+	
 	private JFrame frame;
 	private JPanel panel;
 	private Application app;
@@ -15,6 +19,7 @@ public class CustomButton extends JButton {
 	public CustomButton(JFrame frame, Application app, int width, int height, int x, int y) {
 		this.app = app;
 		this.frame = frame;
+		this.setBorder(new LineBorder(Color.GREEN));
 		this.setSize(width, height);
 		frame.add(this);
 		this.setLocation(x, y);
