@@ -32,6 +32,7 @@ public class HTL_Odysseus {
 		/* Getting Client Icon */
 		ImageIcon imgicon = new ImageIcon(HTL_Odysseus.class.getResource("/resources/htl_icon.png"));
 
+
 		/* Main Window Setup */
 		JFrame f = new JFrame("HTL - Odysseus  V" + clientVersionOutput);
 		f.setSize(980, 616);
@@ -45,7 +46,7 @@ public class HTL_Odysseus {
 
 		/*Main Menu Buttons*/
 		/*[V]ector [D]iagram*/
-		CustomButton bVD = new CustomButton(f, Application.VECTOR_DIAGRAMM, 250, 100, 10, 180);
+		CustomButton bVD = new CustomButton(f, Application.VECTOR_DIAGRAM, 250, 100, 10, 180);
 		bVD.changeIcon("/resources/VectorDiagramButton.jpg");
 		f.add(bVD);
 		bVD.addActionListener(new CustomButtonListener());

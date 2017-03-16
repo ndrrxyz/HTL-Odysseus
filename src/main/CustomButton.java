@@ -28,6 +28,7 @@ public class CustomButton extends JButton {
 	public CustomButton(JPanel panel, Application app, int width, int height, int x, int y) {
 		this.app = app;
 		this.panel = panel;
+		this.setBorder(new LineBorder(Color.GREEN));
 		this.setSize(width, height);
 		panel.add(this);
 		this.setLocation(x, y);
