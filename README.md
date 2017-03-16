@@ -10,7 +10,7 @@ Odysseus ist ein Programm welches den Schülern in der Schule helfen soll.
 
 ## Credits.
 
-@PandaForce1603 , @GenTexX and @fxtxre
+Made by [@PandaForce1603](http://www.github.com/PandaForce1603/), [@GenTexX](http://www.github.com/GenTexX/) and [@fxtxre](http://www.github.com/fxtxre/
 
 
 

@@ -6,12 +6,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import javax.swing.*;
+
 import data.Application;
 
 import listener.CustomButtonListener;
 
 public class HTL_Odysseus {
-
+	
 	public static void main(String[] args) throws IOException {
 		setupMainWindow();
 
@@ -43,12 +44,25 @@ public class HTL_Odysseus {
 		f.setContentPane(new JLabel(new ImageIcon((HTL_Odysseus.class.getResource("/resources/BackgroundMenu.png")))));
 
 		/*Main Menu Buttons*/
-		/*Vector Diagram*/
-		CustomButton b = new CustomButton(f, Application.VECTOR_DIAGRAMM, 250, 100, 10, 180);
-		b.changeIcon("/resources/circuit.jpg");
-		f.add(b);
-		b.addActionListener(new CustomButtonListener());
-
+		
+		/*[V]ector [D]iagram*/
+		CustomButton bVD = new CustomButton(f, Application.VECTOR_DIAGRAMM, 250, 100, 10, 180);
+		bVD.changeIcon("/resources/VectorDiagramButton.jpg");
+		f.add(bVD);
+		bVD.addActionListener(new CustomButtonListener());
+		
+		/*[KV]-Diagramm*/
+		CustomButton bKV = new CustomButton(f, Application.KV_DIAGRAMM, 250, 100, 10+260, 180);
+		bKV.changeIcon("/resources/KvDiagramButton.jpg");
+		f.add(bKV);
+		bKV.addActionListener(new CustomButtonListener());
+		
+		/*[K]omplex-[R]echner*/
+		CustomButton bKR = new CustomButton(f, Application.COMPLEX_CALCULATOR, 250, 100, 270+260, 180);
+		bKR.changeIcon("/resources/ComplexCalculatorButton.jpg");
+		f.add(bKR);
+		bKR.addActionListener(new CustomButtonListener());
+		
 	}
 
 }
