@@ -1,5 +1,5 @@
 package data;
 
 public enum Application {
-	VECTOR_DIAGRAM
+	VECTOR_DIAGRAMM, KV_DIAGRAMM, COMPLEX_CALCULATOR
 }
