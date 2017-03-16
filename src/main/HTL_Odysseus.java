@@ -41,17 +41,14 @@ public class HTL_Odysseus {
 		f.setResizable(false);
 		f.setIconImage(imgicon.getImage());	
 		f.setContentPane(new JLabel(new ImageIcon((HTL_Odysseus.class.getResource("/resources/BackgroundMenu.png")))));
-		
-<<<<<<< HEAD
-		CustomButton button = new CustomButton(f, 200, 100, 390, 310);
-		button.changeIcon("/resources/circuit.jpg");
-				
-=======
-		CustomButton b = new CustomButton(f, Application.VECTOR_DIAGRAMM, 200, 100, 300, 300);
+
+		/*Main Menu Buttons*/
+		/*Vector Diagram*/
+		CustomButton b = new CustomButton(f, Application.VECTOR_DIAGRAMM, 250, 100, 10, 180);
 		b.changeIcon("/resources/circuit.jpg");
 		f.add(b);
 		b.addActionListener(new CustomButtonListener());
->>>>>>> refs/remotes/origin/master
+
 	}
 
 }
