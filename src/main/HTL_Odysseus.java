@@ -32,7 +32,6 @@ public class HTL_Odysseus {
 		/* Getting Client Icon */
 		String appdata = System.getenv("APPDATA");
 		String iconPath = appdata + "\\HTL-Tools\\htl_icon.png";
-		File icon = new File(iconPath);
 		ImageIcon imgicon = new ImageIcon(iconPath);
 
 		/* Main Window Setup */
