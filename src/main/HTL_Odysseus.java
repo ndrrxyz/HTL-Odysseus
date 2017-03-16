@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import javax.swing.*;
+import data.Application;
+
+import listener.CustomButtonListener;
 
 public class HTL_Odysseus {
 
@@ -39,9 +42,16 @@ public class HTL_Odysseus {
 		f.setIconImage(imgicon.getImage());	
 		f.setContentPane(new JLabel(new ImageIcon((HTL_Odysseus.class.getResource("/resources/BackgroundMenu.png")))));
 		
+<<<<<<< HEAD
 		CustomButton button = new CustomButton(f, 200, 100, 390, 310);
 		button.changeIcon("/resources/circuit.jpg");
 				
+=======
+		CustomButton b = new CustomButton(f, Application.VECTOR_DIAGRAMM, 200, 100, 300, 300);
+		b.changeIcon("/resources/circuit.jpg");
+		f.add(b);
+		b.addActionListener(new CustomButtonListener());
+>>>>>>> refs/remotes/origin/master
 	}
 
 }

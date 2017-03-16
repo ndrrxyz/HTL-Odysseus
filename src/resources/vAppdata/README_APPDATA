@@ -1,0 +1,10 @@
+Code to get Appdata location of your system:
+
+String appdata = System.getenv("APPDATA");
+
+
+
+Pictures stored in %appdata%
+----------------------------
+1. Icon -> htl_icon.png
+2. Background -> BackgroundMenu.png
