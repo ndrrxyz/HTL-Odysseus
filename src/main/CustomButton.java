@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class CustomButton extends JButton {
 	private static final long serialVersionUID = 1289736459726L;
+	
 	private JFrame frame;
 	private JPanel panel;
 
