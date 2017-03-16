@@ -46,19 +46,19 @@ public class HTL_Odysseus {
 
 		/*Main Menu Buttons*/
 		/*[V]ector [D]iagram*/
-		CustomButton bVD = new CustomButton(f, Application.VECTOR_DIAGRAM, 250, 100, 10, 180);
+		CustomButton bVD = new CustomButton(f, Application.VECTOR_DIAGRAM, 250, 100, 10, 140);
 		bVD.changeIcon("/resources/VectorDiagramButton.jpg");
 		f.add(bVD);
 		bVD.addActionListener(new CustomButtonListener());
 		
 		/*[KV]-Diagramm*/
-		CustomButton bKV = new CustomButton(f, Application.KV_DIAGRAMM, 250, 100, 10+260, 180);
+		CustomButton bKV = new CustomButton(f, Application.KV_DIAGRAMM, 250, 100, 10+260, 140);
 		bKV.changeIcon("/resources/KvDiagramButton.jpg");
 		f.add(bKV);
 		bKV.addActionListener(new CustomButtonListener());
 		
 		/*[K]omplex-[R]echner*/
-		CustomButton bKR = new CustomButton(f, Application.COMPLEX_CALCULATOR, 250, 100, 270+260, 180);
+		CustomButton bKR = new CustomButton(f, Application.COMPLEX_CALCULATOR, 250, 100, 270+260, 140);
 		bKR.changeIcon("/resources/ComplexCalculatorButton.jpg");
 		f.add(bKR);
 		bKR.addActionListener(new CustomButtonListener());
