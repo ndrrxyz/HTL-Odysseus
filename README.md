@@ -8,9 +8,8 @@ Odysseus ist ein Programm welches den Schülern in der Schule helfen soll.
 
 ## More text to come..
 
-```
 ![Darkrai](http://godndr.comxa.com/htlOdysseus/darkrai.gif)
-```
+
 
 ##Screenshots:
 
