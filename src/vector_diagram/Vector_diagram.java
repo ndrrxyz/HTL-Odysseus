@@ -13,6 +13,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.border.TitledBorder;
 
 import listener.AddButtonListener;
+import listener.RemoveButtonListener;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -32,7 +33,7 @@ public class Vector_diagram extends JFrame implements Runnable {
 
 	private static final long serialVersionUID = -7525251402309591219L;
 	private JPanel mainPane;
-	
+
 	@Override
 	public void run() {
 
@@ -55,53 +56,41 @@ public class Vector_diagram extends JFrame implements Runnable {
 		components.setToolTipText("Component Settings");
 
 		JButton addButton = new JButton("Add");
-		
+
 		JButton removeButton = new JButton("Remove");
 
 		JButton nextButton = new JButton("Next...");
-		
+
 		JLabel lblFrequency = new JLabel("Frequency");
 		lblFrequency.setForeground(Color.WHITE);
-		
+
 		JSpinner frequencySpinner = new JSpinner();
 		frequencySpinner.setModel(new SpinnerNumberModel(new Integer(1), new Integer(1), null, new Integer(1)));
 		GroupLayout gl_mainPane = new GroupLayout(mainPane);
-		gl_mainPane.setHorizontalGroup(
-			gl_mainPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_mainPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_mainPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(components, GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
-						.addGroup(gl_mainPane.createSequentialGroup()
-							.addComponent(addButton)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(removeButton)
-							.addPreferredGap(ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
-							.addComponent(nextButton))
-						.addGroup(gl_mainPane.createSequentialGroup()
-							.addComponent(lblFrequency)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(frequencySpinner, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap())
-		);
-		gl_mainPane.setVerticalGroup(
-			gl_mainPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_mainPane.createSequentialGroup()
-					.addGap(36)
-					.addGroup(gl_mainPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblFrequency)
-						.addComponent(frequencySpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(components)
-					.addGap(19)
-					.addGroup(gl_mainPane.createParallelGroup(Alignment.TRAILING)
-						.addGroup(gl_mainPane.createParallelGroup(Alignment.BASELINE)
-							.addComponent(removeButton)
-							.addComponent(nextButton))
+		gl_mainPane.setHorizontalGroup(gl_mainPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_mainPane.createSequentialGroup().addContainerGap()
+						.addGroup(gl_mainPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(components, GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+								.addGroup(gl_mainPane.createSequentialGroup().addComponent(addButton)
+										.addPreferredGap(ComponentPlacement.RELATED).addComponent(removeButton)
+										.addPreferredGap(ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
+										.addComponent(nextButton))
+								.addGroup(gl_mainPane.createSequentialGroup().addComponent(lblFrequency)
+										.addPreferredGap(ComponentPlacement.RELATED).addComponent(frequencySpinner,
+												GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
+						.addContainerGap()));
+		gl_mainPane.setVerticalGroup(gl_mainPane.createParallelGroup(Alignment.TRAILING).addGroup(gl_mainPane
+				.createSequentialGroup().addGap(36)
+				.addGroup(gl_mainPane.createParallelGroup(Alignment.BASELINE).addComponent(lblFrequency).addComponent(
+						frequencySpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+						GroupLayout.PREFERRED_SIZE))
+				.addPreferredGap(ComponentPlacement.UNRELATED).addComponent(components).addGap(19)
+				.addGroup(gl_mainPane.createParallelGroup(Alignment.TRAILING).addGroup(gl_mainPane
+						.createParallelGroup(Alignment.BASELINE).addComponent(removeButton).addComponent(nextButton))
 						.addComponent(addButton))
-					.addContainerGap())
-		);
+				.addContainerGap()));
 		mainPane.setLayout(gl_mainPane);
 		addButton.addActionListener(new AddButtonListener(components));
+		removeButton.addActionListener(new RemoveButtonListener(components));
 	}
 }
