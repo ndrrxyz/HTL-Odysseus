@@ -33,7 +33,7 @@ public class Vector_diagram extends JFrame implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("wow");
+
 	}
 
 	public Vector_diagram() {
@@ -53,8 +53,7 @@ public class Vector_diagram extends JFrame implements Runnable {
 		components.setToolTipText("Component Settings");
 
 		JButton addButton = new JButton("Add");
-		addButton.addActionListener(new AddButtonListener(components));
-
+		
 		JButton btnNewButton = new JButton("Remove");
 
 		JButton btnNext = new JButton("Next...");
