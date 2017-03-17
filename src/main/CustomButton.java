@@ -19,7 +19,7 @@ public class CustomButton extends JButton {
 	public CustomButton(JFrame frame, Application app, int width, int height, int x, int y) {
 		this.app = app;
 		this.frame = frame;
-		this.setBorder(new LineBorder(Color.GREEN));
+		this.setBorder(new LineBorder(Color.MAGENTA));
 		this.setSize(width, height);
 		frame.add(this);
 		this.setLocation(x, y);
@@ -28,7 +28,7 @@ public class CustomButton extends JButton {
 	public CustomButton(JPanel panel, Application app, int width, int height, int x, int y) {
 		this.app = app;
 		this.panel = panel;
-		this.setBorder(new LineBorder(Color.GREEN));
+		this.setBorder(new LineBorder(Color.MAGENTA));
 		this.setSize(width, height);
 		panel.add(this);
 		this.setLocation(x, y);
