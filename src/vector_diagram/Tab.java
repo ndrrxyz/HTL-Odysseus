@@ -1,5 +1,5 @@
 package vector_diagram;
 
-public class Spule {
+public class Tab {
 
 }
