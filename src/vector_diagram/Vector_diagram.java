@@ -28,7 +28,6 @@ public class Vector_diagram extends JFrame implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("wow");
 	}
 
 	public Vector_diagram() {
