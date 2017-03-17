@@ -67,6 +67,13 @@ public class Windows {
 					fMain.add(bKR);
 					bKR.addActionListener(new CustomButtonListener());
 
+					
+					
+					
+					
+					
+					/*SMALL BUTTONS*/
+					
 					/* [O]rdner [S]truktur [C]reator */
 					CustomButton bOSC = new CustomButton(fMain, Application.FOLDER_STRUCTURE, 120, 25, 833, 40); 
 					bOSC.changeIcon("/resources/FolderStructGenSmallButton.png");
@@ -80,7 +87,7 @@ public class Windows {
 					fMain.add(bYS);
 					
 					/* [G]it[H]ub */
-					CustomButton bGH = new CustomButton(fMain, Application.MEDIA_GITHUB, 120, 25, 833, 490-11); 
+					CustomButton bGH = new CustomButton(fMain, Application.MEDIA_GITHUBMAIN, 120, 25, 833, 490-11); 
 					bGH.changeIcon("/resources/GitHubSmallButton.png");
 					bGH.addActionListener(new CustomButtonListener());
 					fMain.add(bGH);
