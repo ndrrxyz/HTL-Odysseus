@@ -1,18 +1,17 @@
 package vector_diagram;
 
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
 
 public class AddButtonListener implements ActionListener {
-	private JTabbedPane pane;
+	private JFrame frame;
 	
-	AddButtonListener(JTabbedPane pane) {
-		this.pane = pane;
+	public AddButtonListener() {
+		
 	}
 	
-	@Override
 	public void actionPerformed(ActionEvent e) {
-		pane.addTab("", new JPanel());
+		
 	}
-
 }

@@ -1,6 +1,6 @@
 package vector_diagram;
 
-public class Component {
+public abstract class Component {
 	private String reference;
 	private double value;
 	private boolean complex;

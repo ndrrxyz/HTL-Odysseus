@@ -29,7 +29,7 @@ public class Vector_diagram extends JFrame implements Runnable {
 
 	private static final long serialVersionUID = -7525251402309591219L;
 	private JPanel mainPane;
-	private JTextField reference;
+	private JTextField referenceTextField;
 
 	@Override
 	public void run() {
@@ -40,7 +40,7 @@ public class Vector_diagram extends JFrame implements Runnable {
 		setTitle("HTL - Odysseus - Vector Diagram");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Vector_diagram.class.getResource("/resources/htl_icon.png")));
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 640, 480);
+		setBounds(100, 100, 312, 319);
 		mainPane = new JPanel();
 		mainPane.setBackground(Color.DARK_GRAY);
 		mainPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,15 +54,15 @@ public class Vector_diagram extends JFrame implements Runnable {
 
 		JButton addButton = new JButton("Add");
 		
-		JButton btnNewButton = new JButton("Remove");
+		JButton removeButton = new JButton("Remove");
 
-		JButton btnNext = new JButton("Next...");
+		JButton nextButton = new JButton("Next...");
 		
 		JLabel lblFrequency = new JLabel("Frequency");
 		lblFrequency.setForeground(Color.WHITE);
 		
-		JSpinner spinner = new JSpinner();
-		spinner.setModel(new SpinnerNumberModel(new Integer(1), new Integer(1), null, new Integer(1)));
+		JSpinner frequencySpinner = new JSpinner();
+		frequencySpinner.setModel(new SpinnerNumberModel(new Integer(1), new Integer(1), null, new Integer(1)));
 		GroupLayout gl_mainPane = new GroupLayout(mainPane);
 		gl_mainPane.setHorizontalGroup(
 			gl_mainPane.createParallelGroup(Alignment.LEADING)
@@ -73,13 +73,13 @@ public class Vector_diagram extends JFrame implements Runnable {
 						.addGroup(gl_mainPane.createSequentialGroup()
 							.addComponent(addButton)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnNewButton)
-							.addPreferredGap(ComponentPlacement.RELATED, 347, Short.MAX_VALUE)
-							.addComponent(btnNext))
+							.addComponent(removeButton)
+							.addPreferredGap(ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
+							.addComponent(nextButton))
 						.addGroup(gl_mainPane.createSequentialGroup()
 							.addComponent(lblFrequency)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(frequencySpinner, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
 					.addContainerGap())
 		);
 		gl_mainPane.setVerticalGroup(
@@ -88,49 +88,50 @@ public class Vector_diagram extends JFrame implements Runnable {
 					.addGap(36)
 					.addGroup(gl_mainPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblFrequency)
-						.addComponent(spinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(frequencySpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(components, GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
-					.addGap(30)
-					.addGroup(gl_mainPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(addButton)
-						.addComponent(btnNewButton)
-						.addComponent(btnNext))
+					.addComponent(components)
+					.addGap(19)
+					.addGroup(gl_mainPane.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_mainPane.createParallelGroup(Alignment.BASELINE)
+							.addComponent(removeButton)
+							.addComponent(nextButton))
+						.addComponent(addButton))
 					.addContainerGap())
 		);
 
 		JPanel panel = new JPanel();
 		components.addTab("", null, panel, null);
 
-		JLabel lblNewLabel = new JLabel("Component");
+		JLabel componentLabel = new JLabel("Component");
 
 		JComboBox componentBox = new JComboBox();
 		componentBox.setToolTipText("Component Type");
 		
-		JLabel lblNewLabel_1 = new JLabel("Reference");
+		JLabel referenceLabel = new JLabel("Reference");
 		
-		reference = new JTextField();
-		reference.setToolTipText("e.g. R1, R2, L1");
-		reference.setColumns(10);
+		referenceTextField = new JTextField();
+		referenceTextField.setToolTipText("e.g. R1, R2, L1");
+		referenceTextField.setColumns(10);
 		
-		JLabel lblValue = new JLabel("Value");
+		JLabel valueLabel = new JLabel("Value");
 		
-		JSpinner spinner_1 = new JSpinner();
-		spinner_1.setModel(new SpinnerNumberModel(new Double(1), new Double(1), null, new Double(1)));
+		JSpinner valueSpinner = new JSpinner();
+		valueSpinner.setModel(new SpinnerNumberModel(new Double(0), new Double(0), null, new Double(1)));
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNewLabel)
-						.addComponent(lblValue)
-						.addComponent(lblNewLabel_1))
+						.addComponent(componentLabel)
+						.addComponent(valueLabel)
+						.addComponent(referenceLabel))
 					.addGap(18)
 					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
 						.addGroup(gl_panel.createParallelGroup(Alignment.LEADING, false)
-							.addComponent(spinner_1)
-							.addComponent(reference, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(valueSpinner)
+							.addComponent(referenceTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addComponent(componentBox, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(408, Short.MAX_VALUE))
 		);
@@ -143,13 +144,13 @@ public class Vector_diagram extends JFrame implements Runnable {
 							.addComponent(componentBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(reference, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNewLabel_1))
+								.addComponent(referenceTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(referenceLabel))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(spinner_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblValue)))
-						.addComponent(lblNewLabel))
+								.addComponent(valueSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(valueLabel)))
+						.addComponent(componentLabel))
 					.addContainerGap(166, Short.MAX_VALUE))
 		);
 		panel.setLayout(gl_panel);
