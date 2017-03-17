@@ -8,6 +8,9 @@ Odysseus ist ein Programm welches den Schülern in der Schule helfen soll.
 
 ## More text to come..
 
+```
+Project started: 15.03.2017
+```
 
 ## Credits.
 
