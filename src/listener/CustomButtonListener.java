@@ -31,7 +31,6 @@ public class CustomButtonListener implements ActionListener {
 			(new Thread(new Folder_structure())).start();
 			break;
 			
-			
 		case MEDIA_ABOUT:
 			(new Thread(new About())).start();
 			break;
