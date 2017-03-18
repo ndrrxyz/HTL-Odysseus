@@ -1,13 +1,16 @@
 package listener;
 
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import Media.*;
-import complex_calculator.Complex_calculator;
+import Media.About;
+import Media.Credits;
+import Media.Media;
 import folder_structure.Folder_structure;
+import complex_calculator.Complex_calculator;
+import kv_diagram.Kv_diagram;
 import main.CustomButton;
 import vector_diagram.Vector_diagram;
-import kv_diagram.Kv_diagram;
 
 public class CustomButtonListener implements ActionListener {
 
@@ -25,12 +28,7 @@ public class CustomButtonListener implements ActionListener {
 				
 		case COMPLEX_CALCULATOR:
 			(new Thread(new Complex_calculator())).start();
-			break;
-			
-		case FOLDER_STRUCTURE:
-			(new Thread(new Folder_structure())).start();
-			break;
-			
+			break;			
 			
 		case MEDIA_ABOUT:
 			(new Thread(new About())).start();
@@ -83,6 +81,13 @@ public class CustomButtonListener implements ActionListener {
 		case MEDIA_WEBSITESCHULZ:
 			Media.startWebsiteSCHULZ();
 			break;	
+			
+		case FOLDER_STRUCTURE:
+			(new Thread(new Folder_structure())).start();
+			break;
+		
+		case CREATE_MAINPATH:
+			Folder_structure.folderStructGenerator("C:\\", 10);
 			
 		default:
 			break;
