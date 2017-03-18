@@ -1,7 +1,5 @@
 package vector_diagram;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -11,33 +9,19 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTabbedPane;
 import javax.swing.border.TitledBorder;
-
 import listener.AddButtonListener;
 import listener.RemoveButtonListener;
-
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Component;
-import javax.swing.JMenuItem;
-import javax.swing.JMenuBar;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
-import javax.swing.JTextField;
-import javax.swing.JToggleButton;
 
-public class Vector_diagram extends JFrame implements Runnable {
+
+public class Vector_diagram extends JFrame {
 
 	private static final long serialVersionUID = -7525251402309591219L;
 	private JPanel mainPane;
-
-	@Override
-	public void run() {
-
-	}
 
 	public Vector_diagram() {
 		setTitle("HTL - Odysseus - Vector Diagram");
