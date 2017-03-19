@@ -6,12 +6,12 @@
 Odysseus ist ein Programm welches den Schülern in der Schule helfen soll.
 
 
-## More text to come..
+## More text to come
 
 ![Darkrai](http://godndr.comxa.com/htlOdysseus/darkrai.gif)
 
 
-##Screenshots:
+##Screenshots
 
 ![Main](http://godndr.comxa.com/htlOdysseus/Screenshot1.png)
 ![Credits](http://godndr.comxa.com/htlOdysseus/Screenshot2.png)

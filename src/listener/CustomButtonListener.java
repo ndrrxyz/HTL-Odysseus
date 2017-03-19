@@ -2,6 +2,7 @@ package listener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import Media.About;
 import Media.Credits;
@@ -12,7 +13,7 @@ import kv_diagram.Kv_diagram;
 import main.CustomButton;
 import vector_diagram.Vector_diagram;
 
-public class CustomButtonListener implements ActionListener {
+public class CustomButtonListener implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {
 		CustomButton b = (CustomButton) e.getSource();
@@ -88,7 +89,11 @@ public class CustomButtonListener implements ActionListener {
 		
 		case CREATE_MAINPATH:
 			Folder_structure.folderStructGenerator("C:\\", 10);
-			
+		
+		case DELETE_MAINPATH:
+				Folder_structure.deleteFolderStructure("C:\\");
+			break;
+		
 		default:
 			break;
 		}
